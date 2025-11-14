@@ -1,54 +1,56 @@
-🏡 RealEstateX
+## 🏡 RealEstateX
 
 RealEstateX is a full-stack real estate listing platform that allows users to browse, search, and post property listings easily.
 It features interactive maps, smart search with autocomplete, secure login, and a modern UI — making it a complete property discovery experience.
 
-✨ Features
+## ✨ Features
 
-Browse featured property listings with images, details, and pricing
+- Browse featured property listings with images, details, and pricing
 
-Search properties via Google Places Autocomplete
+- Search properties via Google Places Autocomplete
 
-View listing locations on an interactive Google Map
+- View listing locations on an interactive Google Map
 
-Filter by beds, baths, parking, and home type
+- Filter by beds, baths, parking, and home type
 
-Create and manage property listings after logging in
+- Create and manage property listings after logging in
 
-Secure authentication using Clerk
+- Secure authentication using Clerk
 
-Store listings and user data in Supabase
+- Store listings and user data in Supabase
 
-Fully responsive UI built with Tailwind CSS + React
+- Fully responsive UI built with Tailwind CSS + React
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Framework: Next.js (React)
+- Framework: Next.js (React)
 
-Styling: Tailwind CSS
+- Styling: Tailwind CSS
 
-Authentication: Clerk
+- Authentication: Clerk
 
-Database: Supabase
+- Database: Supabase
 
-APIs: Google Maps API, Google Places API
+- APIs: Google Maps API, Google Places API
 
-Hosting: Vercel (optional)
+- Hosting: Vercel
 
-🚀 How to Run Locally
+## 🚀 How to Run Locally
 Clone the repository
-'''
+```bash
 git clone https://github.com/anantvm/RealEstateX.git
 cd realestatex
-'''
+```
 
 Install dependencies
-'''npm install'''
+```bash
+npm install
+```
 
 Add environment variables
 
 Create a .env.local file and include:
-'''
+```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
 CLERK_SECRET_KEY=your_clerk_secret
 
@@ -57,9 +59,11 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 GOOGLE_MAPS_API_KEY=your_maps_api_key
 GOOGLE_PLACES_API_KEY=your_places_api_key
-'''
+```
 Run the development server
-'''npm run dev'''
+```bash
+npm run dev
+```
 
 Open your browser
-'''http://localhost:3000'''
+```http://localhost:3000```
