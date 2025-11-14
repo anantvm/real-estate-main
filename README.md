@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🏡 RealEstateX
 
-## Getting Started
+RealEstateX is a full-stack real estate listing platform that allows users to browse, search, and post property listings easily.
+It features interactive maps, smart search with autocomplete, secure login, and a modern UI — making it a complete property discovery experience.
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Browse featured property listings with images, details, and pricing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Search properties via Google Places Autocomplete
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+View listing locations on an interactive Google Map
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Filter by beds, baths, parking, and home type
 
-## Learn More
+Create and manage property listings after logging in
 
-To learn more about Next.js, take a look at the following resources:
+Secure authentication using Clerk
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Store listings and user data in Supabase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Fully responsive UI built with Tailwind CSS + React
 
-## Deploy on Vercel
+🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Framework: Next.js (React)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Styling: Tailwind CSS
+
+Authentication: Clerk
+
+Database: Supabase
+
+APIs: Google Maps API, Google Places API
+
+Hosting: Vercel (optional)
+
+🚀 How to Run Locally
+Clone the repository
+'''
+git clone https://github.com/anantvm/RealEstateX.git
+cd realestatex
+'''
+
+Install dependencies
+'''npm install'''
+
+Add environment variables
+
+Create a .env.local file and include:
+'''
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
+CLERK_SECRET_KEY=your_clerk_secret
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+GOOGLE_MAPS_API_KEY=your_maps_api_key
+GOOGLE_PLACES_API_KEY=your_places_api_key
+'''
+Run the development server
+'''npm run dev'''
+
+Open your browser
+'''http://localhost:3000'''
