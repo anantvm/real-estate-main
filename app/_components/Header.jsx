@@ -37,7 +37,6 @@ function Header() {
                  font-medium text-sm cursor-pointer'
                  ${path == '/rent' && 'text-primary'}`}>For Rent</li>
           </Link>
-          <li className='hover:text-primary font-medium text-sm cursor-pointer'>Agent Finder</li>
         </ul>
       </div>
       <div className='flex gap-2 items-center'>
