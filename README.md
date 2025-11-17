@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🏡 RealEstateX
 
-## Getting Started
+RealEstateX is a full-stack real estate listing platform that allows users to browse, search, and post property listings easily.
+It features interactive maps, smart search with autocomplete, secure login, and a modern UI — making it a complete property discovery experience.
 
-First, run the development server:
+## ✨ Features
 
+- Browse featured property listings with images, details, and pricing
+
+- Search properties via Google Places Autocomplete
+
+- View listing locations on an interactive Google Map
+
+- Filter by beds, baths, parking, and home type
+
+- Create and manage property listings after logging in
+
+- Secure authentication using Clerk
+
+- Store listings and user data in Supabase
+
+- Fully responsive UI built with Tailwind CSS + React
+
+## 🛠️ Tech Stack
+
+- Framework: Next.js (React)
+
+- Styling: Tailwind CSS
+
+- Authentication: Clerk
+
+- Database: Supabase
+
+- APIs: Google Maps API, Google Places API
+
+- Hosting: Vercel
+
+## 🚀 How to Run Locally
+Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/anantvm/RealEstateX.git
+cd realestatex
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Add environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create a .env.local file and include:
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
+CLERK_SECRET_KEY=your_clerk_secret
 
-## Learn More
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-To learn more about Next.js, take a look at the following resources:
+GOOGLE_MAPS_API_KEY=your_maps_api_key
+GOOGLE_PLACES_API_KEY=your_places_api_key
+```
+Run the development server
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open your browser
+```http://localhost:3000```
