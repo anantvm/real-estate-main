@@ -1,11 +1,12 @@
 "use client"
 import { supabase } from '@/utils/supabase/client'
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { toast } from 'sonner';
 import Slider from '../_components/Slider';
 import Details from '../_components/Details';
 
-function ViewListing({params}) {
+function ViewListing({params: paramsPromise}) {
+    const params = use(paramsPromise);
 
     const [listingDetail,setListingDetail]=useState();
     useEffect(()=>{

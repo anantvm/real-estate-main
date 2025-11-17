@@ -15,13 +15,23 @@ function GoogleAddressSearch({selectedAddress,setCoordinates}) {
                 className:'w-full',
                 onChange:(place)=>{
                     console.log(place);
-                    selectedAddress(place);
-                    geocodeByAddress(place.label)
-                    .then(result=>getLatLng(result[0]))
-                    .then(({lat,lng})=>{
-                       
-                        setCoordinates({lat,lng})
-                    })
+                    selectedAddress(place); // Send the selection (or null) to the parent
+
+                    // --- FIX IS HERE ---
+                    // Only run geocoding if 'place' is not null
+                    if (place) {
+                        geocodeByAddress(place.label)
+                        .then(result=>getLatLng(result[0]))
+                        .then(({lat,lng})=>{
+                        
+                            setCoordinates({lat,lng})
+                        })
+                    } else {
+                        // (Optional but recommended)
+                        // If the place is cleared, clear the coordinates
+                        setCoordinates(null); 
+                    }
+                    // --- END OF FIX ---
                 }
             }}
         

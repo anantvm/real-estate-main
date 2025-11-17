@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, use } from 'react'
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import {
@@ -31,8 +31,9 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 
-function EditListing({ params }) {
+function EditListing({ params: paramsPromise }) {
 
+    const params = use(paramsPromise);
 
     const { user } = useUser();
     const router = useRouter();
@@ -43,7 +44,7 @@ function EditListing({ params }) {
         console.log(user?.imageUrl)
         // console.log(params.split('/')[2]);
         user && verifyUserRecord();
-    }, [user]);
+    }, [user, params]);
 
     const verifyUserRecord = async () => {
         const { data, error } = await supabase

@@ -26,7 +26,7 @@ function UserListing() {
         <h2 className='font-bold text-2xl'>Manage your listing</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             {listing&&listing.map((item,index)=>(
-                 <div className='p-3 hover:border hover:border-primary rounded-lg cursor-pointer'>
+                 <div key={item.id} className='p-3 hover:border hover:border-primary rounded-lg cursor-pointer'>
                     <h2 className='bg-primary m-1 rounded-lg text-white absolute px-2 text-sm p-1'>{item.active?'Published':'Draft'}</h2>
                  <Image src={item?.listingImages[0]?
                  item?.listingImages[0]?.url
@@ -34,6 +34,7 @@ function UserListing() {
                 }
                  width={800}
                  height={150}
+                 alt={item?.address || 'Listing Image'}
                  className='rounded-lg object-cover h-[170px]'
                  />
                  <div className='flex mt-2 flex-col gap-2'>
